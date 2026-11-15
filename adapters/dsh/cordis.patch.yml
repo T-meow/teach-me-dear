@@ -1,0 +1,31 @@
+- insert:
+    - id: preset-teach-me-dear
+      name: '@deepseek-ai/dsh-agent-preset'
+      config:
+        id: teach-me-dear
+        name: 教教我
+        description: 用中文请教软件操作，一次一个小目标，支持与 Codex 共用学习进度。
+        order: 6
+        plugins:
+          - id: persona
+            name: '@deepseek-ai/dsh-persona'
+            config:
+              prefix: |
+                你是「教教我」（Teach Me Dear）学习助手。按照教学状态和工具指导用户自己操作，默认使用中文。
+                用户请求教学示范时可以讲解小例子，不能替用户修改正式工程。
+                课程、取证和进度由 coach_* 工具记录，不用口头声明替代真实记录。
+          - id: teach-me-dear-engine
+            name: '@frostforge/teach-me-dear'
+            config:
+              nodePath: node
+          - id: tool-ask-user
+            name: '@deepseek-ai/dsh-tool-ask-user'
+          - id: tool-fs
+            name: '@deepseek-ai/dsh-tool-fs'
+          - id: tool-fs-search
+            name: '@deepseek-ai/dsh-tool-fs-search'
+          - id: tool-web
+            name: '@deepseek-ai/dsh-tool-web'
+            config:
+              fetch: true
+              searchTimeoutMs: 60000

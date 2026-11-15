@@ -1,0 +1,19 @@
+node_modules/
+.test-data/
+*.sqlite*
+*.log
+.local/
+
+# Generated for the local installation; paths differ on each computer.
+/.mcp.json
+/hooks/hooks.json
+
+# Local credentials, evidence and tooling output.
+.env
+.env.*
+!.env.example
+/shots/
+/coverage/
+.DS_Store
+Thumbs.db
+desktop.ini

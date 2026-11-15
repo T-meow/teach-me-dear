@@ -1,0 +1,29 @@
+{
+  "name": "@frostforge/teach-me-dear",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "教教我：支持中文请教、核查练习结果，并在 Codex 与 DSH 间共用进度。",
+  "author": "FrostForge",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/T-meow/teach-me-dear.git"
+  },
+  "homepage": "https://github.com/T-meow/teach-me-dear#readme",
+  "bugs": { "url": "https://github.com/T-meow/teach-me-dear/issues" },
+  "keywords": ["codex", "deepseek-harness", "mcp", "learning", "coach", "chinese"],
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "start": "node bin/mcp.mjs",
+    "test": "node --test test/*.test.mjs",
+    "install:local": "node scripts/install.mjs",
+    "status": "node bin/cli.mjs status"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "ajv": "^8.17.1"
+  },
+  "dsh": { "bundle": { "patch": "./adapters/dsh/cordis.patch.yml" } },
+  "exports": { ".": "./adapters/dsh/index.mjs", "./package.json": "./package.json" },
+  "license": "MIT"
+}

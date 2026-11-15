@@ -1,0 +1,7 @@
+interface:
+  display_name: "教教我"
+  short_description: "一步一步教你学习软件、核查练习结果，并在 Codex 与 DSH 间继续课程。"
+  default_prompt: "用 $teach-me-dear 手把手教我完成一个软件操作，一次一个小目标。"
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,14 @@
+{
+  "name": "teach-me-dear",
+  "version": "0.2.0",
+  "description": "教教我：用中文请教软件操作，一次一个小目标，Codex 与 DSH 共用学习进度。",
+  "interface": {
+    "displayName": "教教我",
+    "shortDescription": "中文软件学习陪练，手把手指导并核查练习结果。"
+  },
+  "author": { "name": "FrostForge" },
+  "license": "MIT",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "hooks": "./hooks/hooks.json"
+}
